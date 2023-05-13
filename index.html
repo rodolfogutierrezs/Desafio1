@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador Rodolfo Gutierrez</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="imagenes/Logo_exp.png" alt="Logo de Alura">
+        </header>
+        <main>
+            <section class="encabezado">
+                <textarea id="textoporencriptar" class="textoporencriptar" oninput='this.style.height = ""; this.style.height = this.scrollHeight + "px"' required placeholder="Ingrese el texto aquí"></textarea>
+                <div class="frame1">
+                    <img class="exclamacion" src="imagenes/bi_exclamation-circle-fill.png">
+                    <p>Solo letras minúscular y sin acentos</p>
+                </div>
+                <div class="action_btn">
+                    <button class="btn1" id="btn_1" onclick="getValue()">Encriptar</button>
+                    <button class="btn2" id="btn_2" onclick="getValue2()">Desencriptar</button>
+                </div>
+            </section>
+            <section class="despliegue" id="despliegue">
+                <div class="sindatos" id="sindatos">
+                    <img class="muneco" id="muneco1" src="imagenes/Muñeco.png">
+                    <div class="nomensaje" id="mensaje">
+                        <h5>Ningún mensaje fue encontrado</h5>
+                        <h6>Ingresa el texto que desees encriptar o desencriptar</h6>
+                    </div>
+                </div>
+                <div class="condatos" id="condatos">
+                    <textarea class="salida" id="salida" contenteditable></textarea>
+                    <button class="btn3" id="btn_3" onclick="mkcopy()">Copiar</button>
+                </div>
+            </section>
+        </main>
+        <footer></footer>
+    </body>
+</html>
+
+<script>
+    function getValue(){
+        var strencriptado="";
+        var letra="";
+        salida.style.height="0px"
+        var straencriptar=document.getElementById("textoporencriptar").value;
+        for(var i=0;i<straencriptar.length;i++){
+            switch (straencriptar[i]){
+                case "e":
+                    letra = "enter";
+                    break;
+                case "i":
+                    letra = "imes";
+                    break;
+                case "a":
+                    letra = "ai";
+                    break;
+                case "o":
+                    letra = "ober";
+                    break;
+                case "u":
+                    letra = "ufat";
+                    break;
+                case " ":
+                    letra = " ";
+                    break;
+                default:
+                    letra = straencriptar[i];
+                    break;
+            }
+            strencriptado = strencriptado + letra;
+        }
+        document.getElementById("btn_3").style.display="flex";
+        document.getElementById("sindatos").style.display="none";
+        document.getElementById("salida").style.display="flex";
+        document.getElementById("salida").style.visibility="visible"
+        document.getElementById("salida").value = strencriptado;
+//        document.getElementById("muneco").style.display="none";
+//        document.getElementById("muneco").style.visibility="invisible";
+//        document.getElementById("nomensaje").style.display="none";
+//        document.getElementById("nomensaje").style.visibility="invisible";
+        salida.style.height=(salida.scrollHeight-64)+"px";
+    }
+
+    function mkcopy(){
+        fraseencriptada="";
+        var fraseencriptada=document.getElementById("salida");
+        fraseencriptada.select();
+        fraseencriptada.setSelectionRange(0,99999);
+        navigator.clipboard.writeText(fraseencriptada.value);
+    }
+    function getValue2(){
+        var strdesencriptado="";
+        var letra="";
+        salida.style.height="0px"
+        var strpordesencriptar=document.getElementById("textoporencriptar").value;
+        for(var i=0;i<strpordesencriptar.length;i++){
+            switch (strpordesencriptar[i]){
+                case "a":
+                    if(strpordesencriptar[i+1]=="i"){
+                        letra="a";
+                        i++;
+                    }
+                    break;
+                case "e":
+                    if (strpordesencriptar[i+1] == "n") {
+                        if (strpordesencriptar[i+2] == "t") {
+                            if (strpordesencriptar[i+3] == "e") {
+                                if (strpordesencriptar[i+4] == "r"){
+                                    letra = "e";
+                                    i = i + 4;
+                                }
+                            }
+                        }
+                    }
+                    break;
+                case "i":
+                    if (strpordesencriptar[i+1] == "m"){
+                        if (strpordesencriptar[i+2] == "e"){
+                            if (strpordesencriptar[i+3] == "s"){
+                                letra = "i"
+                                i = i + 3;
+                            }
+                        }
+                    }
+                    break;
+                case "o":
+                    if (strpordesencriptar[i+1] == "b"){
+                        if (strpordesencriptar[i+2] == "e"){
+                            if (strpordesencriptar[i+3] == "r"){
+                                letra = "o";
+                                i = i + 3;
+                            }
+                        }
+                    }
+                    break;
+                case "u":
+                    if (strpordesencriptar[i+1] == "f"){
+                        if (strpordesencriptar[i+2] == "a"){
+                            if (strpordesencriptar[i+3] == "t"){
+                                    letra = "u";
+                                    i = i + 3;
+                            }
+                        }
+                    }
+                    break;
+                default:
+                    letra = strpordesencriptar[i];
+                    break;
+            }
+            strdesencriptado = strdesencriptado + letra;
+        }
+        document.getElementById("btn_3").style.display="flex";
+        document.getElementById("sindatos").style.display="none";
+        document.getElementById("salida").style.display="flex";
+        document.getElementById("salida").style.visibility="visible"
+//        document.getElementById("salida").style.display="none";
+        document.getElementById("salida").value = strdesencriptado;
+        salida.style.height=(salida.scrollHeight-64)+"px";
+    }
+</script>

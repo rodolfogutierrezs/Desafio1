@@ -1,0 +1,523 @@
+*{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    background-color: #F3F5FC;
+}
+
+.logo{
+    position: absolute;
+    left: 40px;
+    top: 40px;
+}
+
+/* section encabezado */
+
+.textoporencriptar{
+    position: absolute;
+    display: block;
+    width: 577px;
+    height: 48px;
+    left: 240px;
+    top: 168px;
+    text-transform: lowercase;
+    background: transparent;
+    border: none;
+    overflow: hidden;
+    resize: both;
+    color: #0A3871;
+}
+
+.textoporencriptar::placeholder{
+    color: #0A3871;
+    font-size: 32px;
+}
+
+.textoporencriptar:focus::placeholder{
+    color: transparent;
+}
+
+.textoporencriptar:focus, input:focus{
+    outline: none;
+}
+
+.frame1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    position: absolute;
+    width: 229px;
+    height: 18px;
+    left: 240px;
+    top: 851px;
+}
+
+.exclamacion{
+    top: 852px;
+    left: 240px;
+}
+
+p{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    position: absolute;
+    top: 0px;
+    left: 24px;
+    gap: 8px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #495057;
+    opacity: 0.8;
+}
+
+.action_btn{
+    display: block;
+    position: relative;
+    top: 885px;
+    left: 240px;
+    width: 680px;
+    height: 67px;
+    gap: 24px;
+}
+
+.btn1, .btn2{
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    gap: 8px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 24px;
+    border: 1px solid #0A3871;
+}
+
+.btn1{
+    background-color: darkblue;
+    color: white;
+}
+
+.btn2{
+    background-color: lightblue;
+    color: darkblue;
+}
+
+/* section despliegue */
+
+.despliegue{
+    display: flex;
+    width: 400px;
+    height: 944px;
+    background-color: white;
+    position: absolute;
+    top: 40px;
+    left: 1000px;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+/* class sindatos */
+
+.sindatos{
+    visibility:hidden;
+}
+
+.muneco{
+    position: absolute;
+    visibility: visible;
+    background: transparent;
+    top: 283px;
+    left: 32px;
+    width: 336px;
+    height: 304px;
+}
+
+.nomensaje{
+    position: relative;
+    visibility: visible;
+    background: transparent;
+    width: 336px;
+    height: 122px;
+    left: 32px;
+    top: 619px;
+    gap: 16px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: #343A40;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+h5, h6{
+    background: transparent;
+    width: 336px;
+    text-align: center;
+    flex: none;
+    align-self: stretch;
+    flex-grow: 0; 
+}
+
+h5{
+    height: 58px;
+    font-size: 24px;
+    line-height: 120%;
+    font-weight: 700;
+    order: 0;
+}
+
+h6{
+    height: 48px;
+    font-size: 16px;
+    color: #495057;
+    order: 1;
+}
+
+/* class condatos */
+
+.condatos{
+    visibility: visible;
+    background: transparent;
+}
+
+.salida{
+    display: none;
+    position: relative;
+    width: 336px;
+    bottom: 32px;
+    background-color: transparent;
+    left: 0px;
+    top: 40px;
+    border-radius: 32px;
+    border: none;
+    padding: 32px;
+/*    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08); */
+    resize: both;
+    overflow: hidden;
+    font-size: 24px;
+    color: #495057;
+}
+
+.salida:focus::placeholder{
+    color: transparent;
+}
+
+.salida:focus, input:focus{
+    outline: none;
+}
+
+.btn3{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 24px;
+    gap: 8px;
+    position: absolute;
+    background: transparent;
+    justify-content: center;
+    top: 843px;
+    align-items: center;
+    left: 32px;
+    width: 336px;
+    height: 67px;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #0A3871;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    display: none;
+}
+
+@media screen and (max-width:770px){
+    .logo{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 0px 0px 0px;
+        gap: 0px;
+        position: absolute;
+        left: 0px;
+        top: 23.97px;
+    }
+    
+    .textoporencriptar{
+        position: relative;
+        width: 688px;
+        height: 48px;
+        left: 40px;
+        top: 240px;
+        color: #0A3871;
+    }
+
+    .frame1{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        gap: 8px;
+        position: relative;
+        width: 229px;
+        height: 18px;
+        left: 40px;
+        top: 836px;
+    }
+
+    .action_btn{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 24px;
+        position: relative;
+        width: 688px;
+        height: 67px;
+        left: 40px;
+        top: 870px;
+    }
+
+    .despliegue{
+        display: flex;
+        position: relative;
+        resize: vertical;
+        width: 688px;
+        top: 890px;
+        left: 40px;
+        height: auto;
+    }
+
+    .muneco{
+        display: none;
+    }
+
+    .nomensaje{
+        position: relative;
+        background: transparent;
+        width: 624px;
+        left: 40px;
+        padding: 16px;
+        top: 0px;
+        gap: 16px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 120%;
+        text-align: center;
+        color: #343A40;
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+
+    h5, h6{
+        visibility: visible;
+        display: block;
+        width: 624px;
+        font-weight: 700;
+        line-height: 120%;
+        text-align: center;
+    }
+
+    h5{
+        height: 29px;
+        font-size: 24px;
+        order: 0;
+        color: #343A40;
+        padding: 16px 0px 16px 0px;
+    }
+
+    h6{
+        height: 24px;
+        font-size: 16px;
+        order: 1;
+        color: #495057;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .salida{
+        visibility: hidden;
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        resize: vertical;
+        width: 624px;
+        top: 0px;
+        left: 40px;
+    }
+
+    .btn3{
+        box-sizing: border-box;
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        align-items: flex-start;
+        top: 0px;
+        left: 32px;
+        padding: 32px;
+        gap: 8px;
+        width: 624px;
+        height: 67px;
+        border: 1px solid #0A3871;
+        border-radius: 24px;
+        color: #0A3871;
+        flex: none;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 0;
+        display: none;
+    }
+}
+
+@media screen and (max-width:400px){
+.logo{
+    top: 24px;
+    left: 0px;
+    width: 32px;
+    height: 16px;
+    gap: 0px;
+    padding: 0px;
+}
+
+    .textoporencriptar{
+        width: 343px;
+        height: 48px;
+        left: 16px;
+        top: 152px;
+        padding: 0px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 150%;
+        color: #0A3871;
+    }
+
+    .frame1{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        gap: 8px;
+        position: relative;
+        width: 229px;
+        height: 18px;
+        left: 16px;
+        top: 451px;
+    }
+
+    .action_btn{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 24px;
+        position: relative;
+        width: 343px;
+        height: 158px;
+        left: 16px;
+        top: 485px;
+    }
+
+    .btn1, .btn2{
+        display: flex;
+        width: 343px;
+        justify-content: center;
+    }
+
+    .despliegue{
+        display: flex;
+        position: relative;
+        width: 327px;
+        top: 500px;
+        left: 24px;
+    }
+
+    .muneco{
+        display: none;
+    }
+
+    .nomensaje{
+        position: relative;
+        width: 263px;
+        left: 12px;
+        top: 0px;
+        font-size: 24px;
+        line-height: 120%;
+        padding: 0px 0px 16px 32px;
+        color: #343A40;
+    }
+
+    h5{
+        width: 263px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+        color: #343A40;
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+
+    h6{
+        width: 263px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        padding: 16px 0px 0px 0px;
+        color: #495057;
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+
+    .salida{
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px;
+        gap: 32px;
+        position: relative;
+        width: 311px;
+        height:auto;
+        top: 0px;
+        left: 0px;
+    }
+
+    .btn3{
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        margin: 0px;
+        left: 8px;
+        padding: 0px;
+        gap: 8px;
+        width: 311px;
+        height: 67px;
+        top: 0px;
+        border: 1px solid #0A3871;
+        border-radius: 24px;
+        flex: none;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 0;
+        color: #0A3871;
+        display: none;
+        align-items: center;
+    }
+}
